@@ -2,15 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.yxd</groupId>
+    <groupId>com.happy</groupId>
     <artifactId>parent</artifactId>
-    <version>1.0.0.20160109-SNAPSHOT</version>
+    <version>1.0.0.20151126-SNAPSHOT</version>
     <packaging>pom</packaging>
     <developers>
         <developer>
             <id>yuxd</id>
             <name>yuxd</name>
-            <email>2801708582@qq.com</email>
+            <email>yuxiaodong@happyto.com</email>
             <timezone>-5</timezone>
             <roles>
                 <role>developer</role>
@@ -447,25 +447,14 @@
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
-                <version>3.1.0</version>
+                <version>${servlet.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>javax.servlet.jsp</groupId>
-                <artifactId>javax.servlet.jsp-api</artifactId>
-                <version>2.3.1</version>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jstl</artifactId>
+                <version>${jstl.version}</version>
                 <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>javax.el</groupId>
-                <artifactId>javax.el-api</artifactId>
-                <version>2.2.5</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>javax.servlet.jsp.jstl</groupId>
-                <artifactId>javax.servlet.jsp.jstl-api</artifactId>
-                <version>1.2.1</version>
             </dependency>
             <!--security-->
             <dependency>
@@ -557,8 +546,8 @@
             <!--cached start-->
             <dependency>
                 <groupId>net.sf.ehcache</groupId>
-                <artifactId>ehcache-core</artifactId>
-                <version>2.6.11</version>
+                <artifactId>ehcache</artifactId>
+                <version>2.10.1</version>
             </dependency>
             <dependency>
                 <groupId>net.sf.ehcache</groupId>
@@ -568,14 +557,14 @@
             <dependency>
                 <groupId>redis.clients</groupId>
                 <artifactId>jedis</artifactId>
-                <version>2.7.2</version>
+                <version>${jedis.version}</version>
             </dependency>
             <!--cached end -->
             <!--db start -->
             <dependency>
                 <groupId>com.oracle</groupId>
                 <artifactId>ojdbc7</artifactId>
-                <version>12.1.0.2.0</version>
+                <version>${oracle.version}</version>
             </dependency>
             <dependency>
                 <groupId>postgresql</groupId>
@@ -630,7 +619,7 @@
             <dependency>
                 <groupId>org.freemarker</groupId>
                 <artifactId>freemarker</artifactId>
-                <version>2.3.20</version>
+                <version>${freemarker.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.velocity</groupId>
@@ -670,11 +659,6 @@
                 <groupId>com.thoughtworks.xstream</groupId>
                 <artifactId>xstream</artifactId>
                 <version>1.4.8</version>
-            </dependency>
-            <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-databind</artifactId>
-                <version>2.4.3</version>
             </dependency>
             <dependency>
                 <groupId>com.alibaba</groupId>
@@ -808,7 +792,8 @@
                 <version>${yuicompressor.version}</version>
             </dependency>
             <!-- hibernate start -->
-            <!-- hibernate end -->
+            <!-- hibernate start -->
+
         </dependencies>
     </dependencyManagement>
     <properties>
